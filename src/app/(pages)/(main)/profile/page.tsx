@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { IoSettings } from "react-icons/io5";
 import { FaCalendarCheck } from "react-icons/fa6";
 import Link from "next/link";
@@ -6,7 +6,10 @@ import Likes from "./likes";
 import Comments from "./comments";
 import Whispers from "./whispers";
 
-const Profile = async ({ searchParams }: any) => {
+interface Props {
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+const Profile: FC<Props> = async ({ searchParams }) => {
   const { tab } = await searchParams;
   console.log(tab);
 
