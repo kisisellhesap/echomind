@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Antic_Didone, Fira_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "./components/header";
+import Image from "next/image";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const firaSans = Fira_Sans({
+  variable: "--font-fira-sans",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const anticDidone = Antic_Didone({
+  variable: "--font-antic-didone",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +28,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className=" relative">
         {children}
+        <div className="w-[100%] top-0  fixed h-[100vh] grid place-items-center -z-10">
+          <div className="w-[500px] h-[500px] relative ">
+            <Image
+              src="/logo.png"
+              alt="echo-logo"
+              className="opacity-15  pointer-events-none"
+              fill
+              sizes="500"
+              priority
+            />
+          </div>
+        </div>
       </body>
     </html>
   );

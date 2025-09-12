@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --font-fira-sans: "Fira Sans";
+  --font-antic-didone: "Antic Didone";
+  --color-theme-black: #000000;
+  --color-theme-white: #ffffff;
+  --color-theme-blue: #4386dd;
+  --color-theme-lavender: #8b38d7;
+  --color-theme-pastelLavender: #cf92ff;
+  --color-theme-vividPurple: #7616d4;
+  --color-theme-red: #dd5858;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-antic-didone);
+  font-size: 20px;
+  background-color: var(--color-theme-black);
+  user-select: none;
+  color: white;
+}
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
+    font-family: var(--font-antic-didone);
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+/* Loader * /
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  color: #ffffff;
+  width: 4px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: l21 0.5s infinite alternate linear;
+}
+
+@keyframes l21 {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+  }
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+  }
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+  border-radius: 7px;
+}
+progress::-webkit-progress-value {
+  background-color: var(--color-theme-lavender);
+}
+
+@layer components {
+  .content-base-css {
+    @apply bg-white/10 backdrop-blur-sm rounded-lg p-4;
+  }
+  .layout-container {
+    @apply w-[80%] max-w-[1000px] max-md:w-[97%]  mx-auto py-5;
+  }
+
+  .nav-span {
+    @apply absolute p-1 bg-theme-lavender rounded-full text-[.8rem] 
+         right-[-35px] opacity-0 transition-all 
+         group-hover:opacity-100 group-hover:right-[-95px] min-w-[70px] 
+         invisible group-hover:visible;
+  }
 }

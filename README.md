@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FONT STYLE
 
-## Getting Started
+- fira sans
+- voga
 
-First, run the development server:
+# Pages
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- WHISPERS
+  -TRENDS
+- LOGIN / REGISTER
+- PROFILE
+  - followers
+  - MY WHİSPERS
+  - settings
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Actions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Home
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- input içerisindeki select alanını değiştirilemez yap ve select bilgisini localstoragte tut. (I wish, I feel, I regret).
 
-## Learn More
+## PostCard
 
-To learn more about Next.js, take a look at the following resources:
+- postId
+- img
+- isim
+- username
+- post oluşturma saati
+- takip edilmiyorsa takip et butonu
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## User
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-userid
+-img
+-isim
+-username
+-posts
+-takipçiler
+-takipler
+-beğeniler
+-yorumlar
+-bildirimler
 
-## Deploy on Vercel
+## NOTE
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- header içindekileri aside'a aktar
+- linkleri düzenle
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ASİDE
+
+ilk önce aside için responsive tasarım yap daha sonra toggle'ı responsive haline getir.
+
+## last
+
+categori ve type'i genişlet . başka bir arayüz hazırla createpost için.
