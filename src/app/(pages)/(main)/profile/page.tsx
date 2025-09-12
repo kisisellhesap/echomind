@@ -6,10 +6,7 @@ import Likes from "./likes";
 import Comments from "./comments";
 import Whispers from "./whispers";
 
-interface Props {
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-const Profile: FC<Props> = ({ searchParams }) => {
+const Profile: FC = ({ searchParams }: any) => {
   const { tab } = searchParams;
   console.log(tab);
 
