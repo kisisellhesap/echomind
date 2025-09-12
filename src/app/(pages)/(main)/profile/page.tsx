@@ -9,8 +9,8 @@ import Whispers from "./whispers";
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined };
 }
-const Profile: FC<Props> = async ({ searchParams }) => {
-  const { tab } = await searchParams;
+const Profile: FC<Props> = ({ searchParams }) => {
+  const { tab } = searchParams;
   console.log(tab);
 
   const content =
