@@ -4,7 +4,7 @@ import { TfiComment } from "react-icons/tfi";
 import { GoHeart } from "react-icons/go";
 import { motion } from "framer-motion";
 
-const PostCard: FC<any> = () => {
+const PostCard: FC = () => {
   return (
     <motion.div
       layout

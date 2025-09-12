@@ -1,4 +1,3 @@
-import Banner from "@/app/components/Auth/banner";
 import FormAuth from "@/app/components/form-auth";
 import React from "react";
 
