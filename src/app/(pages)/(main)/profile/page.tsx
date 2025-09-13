@@ -14,7 +14,11 @@ interface ProfileProps {
   searchParams: ProfileSearchParams;
 }
 
-const Profile: FC<ProfileProps> = ({ searchParams }) => {
+const Profile: FC<ProfileProps> = ({
+  searchParams,
+}: {
+  searchParams: ProfileSearchParams;
+}) => {
   const { tab } = searchParams;
   console.log(tab);
 
