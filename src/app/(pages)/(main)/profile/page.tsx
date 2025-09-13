@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { IoSettings } from "react-icons/io5";
 import { FaCalendarCheck } from "react-icons/fa6";
 import Link from "next/link";
@@ -6,16 +6,7 @@ import Likes from "./likes";
 import Comments from "./comments";
 import Whispers from "./whispers";
 
-type ProfileSearchParams = {
-  tab?: "whispers" | "likes" | "comments";
-};
-
-// ✅ Next.js'in PageProps tipine uygun tanımlama
-export default function Profile({
-  searchParams,
-}: {
-  searchParams: ProfileSearchParams;
-}) {
+const Profile: FC = ({ searchParams }: any) => {
   const { tab } = searchParams;
   console.log(tab);
 
@@ -27,17 +18,14 @@ export default function Profile({
     ) : (
       <Comments />
     );
-
   const active =
     tab === "whispers"
       ? "translate-x-0"
       : tab === "likes"
       ? "translate-x-full"
       : "translate-x-[200%]";
-
   return (
     <div className="relative flex flex-col gap-3 ">
-      {/* Profil header */}
       <div className="flex flex-col gap-9 content-base-css ">
         <div className="flex gap-5  items-center ">
           <div className="w-[100px] h-[100px] rounded-full bg-green-50"></div>
@@ -68,18 +56,18 @@ export default function Profile({
         </div>
       </div>
 
-      {/* Tablar */}
       <div className="">
-        <div className="flex border-t z-0 text-md sticky top-0 bg-transparent border-b backdrop-blur-sm rounded-lg text-sm overflow-hidden mb-3">
+        <div className="flex border-t z-0 text-md sticky top-0   bg-transparent border-b backdrop-blur-sm rounded-lg text-sm overflow-hidden mb-3">
           <Link
             href="/profile?tab=whispers"
-            className="flex-1 flex items-center justify-center text-center p-2"
+            className="flex-1 flex items-center justify-center  text-center p-2"
           >
             Whispers
           </Link>
           <Link
-            href="/profile?tab=likes"
-            className="flex-1 flex items-center justify-center text-center p-2 "
+            href="/profile?tab=likes
+"
+            className="flex-1 flex items-center justify-center  text-center p-2 "
           >
             Like
           </Link>
@@ -97,4 +85,6 @@ export default function Profile({
       </div>
     </div>
   );
-}
+};
+
+export default Profile;
