@@ -6,9 +6,14 @@ import Likes from "./likes";
 import Comments from "./comments";
 import Whispers from "./whispers";
 
-const Profile: FC = ({ searchParams }: any) => {
+interface ProfilePageProps {
+  searchParams: {
+    tab?: string;
+  };
+}
+
+const Profile: FC<ProfilePageProps> = ({ searchParams }) => {
   const { tab } = searchParams;
-  console.log(tab);
 
   const content =
     tab === "whispers" ? (

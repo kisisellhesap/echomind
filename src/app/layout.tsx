@@ -3,13 +3,13 @@ import { Antic_Didone, Fira_Sans } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 
-export const firaSans = Fira_Sans({
+const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
-export const anticDidone = Antic_Didone({
+const anticDidone = Antic_Didone({
   variable: "--font-antic-didone",
   subsets: ["latin"],
   weight: "400",

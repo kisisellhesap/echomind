@@ -5,13 +5,7 @@ import {
   handleTextChange,
   handleTypeChange,
 } from "@/app/utils/create-post-f";
-import React, {
-  Dispatch,
-  FC,
-  FormEvent,
-  SetStateAction,
-  useState,
-} from "react";
+import React, { Dispatch, FC, FormEvent, SetStateAction } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 interface Props {
