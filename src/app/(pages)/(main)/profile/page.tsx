@@ -7,13 +7,13 @@ import Comments from "./comments";
 import Whispers from "./whispers";
 
 interface ProfilePageProps {
-  searchParams: {
+  searchParams: Promise<{
     tab?: string;
-  };
+  }>;
 }
 
-const Profile: FC<ProfilePageProps> = ({ searchParams }) => {
-  const { tab } = searchParams;
+const Profile: FC<ProfilePageProps> = async ({ searchParams }) => {
+  const { tab } = await searchParams;
 
   const content =
     tab === "whispers" ? (
