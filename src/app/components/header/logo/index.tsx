@@ -8,7 +8,7 @@ const Logo: FC<Props> = ({ toggle }) => {
   return (
     <div className="flex flex-col items-center">
       <Image
-        src={"/logo.png"}
+        src={"./logo.png"}
         alt="logo"
         width={120}
         height={120}
